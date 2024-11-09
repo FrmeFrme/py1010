@@ -33,3 +33,8 @@ print(' El-bil-kostn =', Elkostn, ' kr/år')
 Bekostn = Fbe + (365 * Trforsikrdag) + (K * Bekostnkn) + (K * BebilBomavgiftkm )
 
 print(' Bensin-bil-kostn =', Bekostn, ' kr/år')
+
+# Lagt til 2024-11-09.  Ser jeg har glemt å beregne differansen mellom Bensin bil og El-bil. Tillater meg å legge til det i ettertid:
+BilKostDiff = Bekostn - Elkostn
+
+print(' Differanse i kostnad mellom bensinbil og el-bil =', BilKostDiff, ' kr/åe')
