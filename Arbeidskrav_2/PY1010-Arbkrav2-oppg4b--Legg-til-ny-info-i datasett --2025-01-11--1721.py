@@ -10,8 +10,8 @@ legges til.
 # Dictionary 
 data = { "Norge": ["Oslo", 0.634], "England": ["London", 8.982], "Frankrike": ["Paris", 2.161], "Italia": ["Roma", 2.873] }
     
-# Legg inn nytt land    
-angi_nytt_land = str(input("Legg inn et nytt land med tilhørende informasjon. Hvilket land? "))
+# Legg inn nytt land. Konverter alltid første bokstav til stor bokstav.    
+angi_nytt_land = str(input("Legg inn et nytt land med tilhørende informasjon. Hvilket land? ")).capitalize()
 angi_land = angi_nytt_land
 
 # UTfør oppslag - sjekk om landet allerede eksisterer i dictionary og presenter det. Hvis nytt land oppgis bes det om 
