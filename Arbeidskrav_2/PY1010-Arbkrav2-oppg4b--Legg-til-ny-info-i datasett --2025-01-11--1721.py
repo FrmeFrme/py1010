@@ -21,8 +21,8 @@ if angi_land in data:
     print(f"Land: {angi_land}, Hovedstad: {info[0]}, Befolkning: {info[1]}  [milloner]")
 else:
     # Innhent info om hovedstad og antall innbyggere til det nye landet som er angitt
-    angi_hovedstad = str(input("Informasjon om landet legges til. Hva heter hovedstaden i " + str(angi_nytt_land) + "? "))
-    angi_antall_innbyggere = str(input("Hvor mange innbyggere har " + str(angi_nytt_land) + "? "))
+    angi_hovedstad = str(input("Informasjon om landet legges til. Hva heter hovedstaden i " + str(angi_nytt_land) + "? ")).capitalize()
+    angi_antall_innbyggere = str(input("Hvor mange innbyggere har " + str(angi_hovedstad) + "? "))
 
     # Utvid dictenary
     data[str(angi_nytt_land)] = [str(angi_hovedstad), str(angi_antall_innbyggere)]
