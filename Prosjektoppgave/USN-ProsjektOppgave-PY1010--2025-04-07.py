@@ -46,12 +46,38 @@ for dag in ukedager:
 
 
 
-# Deloppgave B) Visualiser antall henvendelser for hver av de 5 ukedagene i søylediagrem /stolpediagram
+# Deloppgave B) Visualiser antall henvendelser for hver av de 5 ukedagene i søylediagram /stolpediagram
 plt.close('all')
 
 # Plot stolpediagram
 plt.figure(figsize=(13, 9))
-plt.bar(ukedager, antall_henvendelser_pr_dag, color='skyblue', edgecolor='black')
+bars = plt.bar(ukedager, antall_henvendelser_pr_dag, color='skyblue', edgecolor='black')  # <-- her er 'bars'
+
+# Legg til tall inne i søylene
+for bar, antall in zip(bars, antall_henvendelser_pr_dag):
+    plt.text(
+        bar.get_x() + bar.get_width() / 2,
+        bar.get_height() / 2,  # Midt inne i søylen
+        str(antall),
+        ha='center',
+        va='center',
+        fontsize=12,
+        fontweight='bold',
+        color='black'
+    )
+
+# Legg til titler og etiketter
+plt.xlabel('Ukedager')
+plt.ylabel('Antall henvendelser')
+plt.title('Supporthenvendelser per ukedag')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+# Vis plottet
+plt.show()
+
+print(f"\nDeloppgave B) utført. Søylediagram er plottet. Se eget plot-vindu")
+
+
 
 # Legg til titler og etiketter
 plt.xlabel('Ukedager')
